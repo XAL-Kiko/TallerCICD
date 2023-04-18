@@ -1,8 +1,10 @@
 from lambdas.collatz.main import conjetura_de_collatz
 
-def test_results():
+def test_results_null():
     assert conjetura_de_collatz(-2)==None
     assert conjetura_de_collatz(0)==None
+
+def test_results_valid():
     assert conjetura_de_collatz(12)==int(9)
     assert conjetura_de_collatz(23952385)==int(115)
 
