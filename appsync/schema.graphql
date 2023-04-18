@@ -1,0 +1,13 @@
+schema {
+  query: Query
+}
+
+type Urls {
+  filename: String!
+  url: String
+  visible: Boolean
+}
+
+type Query {
+    getUrls: [Urls]
+}
