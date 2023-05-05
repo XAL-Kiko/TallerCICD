@@ -21,7 +21,19 @@ def file_into_list(file_route):
     return lines
 
 def conjetura_de_collatz(number):
-    return -1
+    if (int(number)>0):
+        i=0
+        while number!=1:
+            print(number)
+            if (number%2==0):   #Si es par
+                number=number/2
+            else:               #Si es impar
+                number=(3*number)+1 
+            i=i+1
+        return i
+    else:
+        print(f"{number} 0 or smaller")
+        return None
 
 
 def create_dynamodb_record(filename,result):
